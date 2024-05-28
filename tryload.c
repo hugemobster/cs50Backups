@@ -41,15 +41,16 @@ int main(void){
     for(int i = 0; i < strlen(word); i++){
         temp = word[i];
         if (temp == '\n'){
-            printf("n");
+            word[i] = '\0';
+            //printf("n\n");
         }
 
-        else{
-            printf("%c",word[i]);
-        }
-
-
+        // else{
+        //     printf("%c",word[i]);
+        // }
     }
+
+    printf("%s", word[1]);
 
 
 }
