@@ -7,6 +7,8 @@
 
 #include "dictionary.h"
 
+/*V1 push attempt*/
+
 // Represents a node in a hash table
 typedef struct node
 {
@@ -123,6 +125,8 @@ bool load(const char *dictionary) {
     for (int i = 0; i < N; i++) {
         table[i] = NULL;
     }
+
+
     size_t word_size;
     char word[LENGTH];
     while (fread(word, LENGTH+1, 1, dict)) {//fread(word, LENGTH, 1, dict)fgets(word, LENGTH, dict)
