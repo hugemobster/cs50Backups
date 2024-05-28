@@ -25,5 +25,13 @@ char u_word[45];
 unsigned int SIZE = 0;
 
 int main(void){
-    char path[] = "dictionaries/";
+    char dictPath[] = "dictionaries/small";
+    char filePath[] = "texts/cat.txt";
+
+    FILE *dict = fopen(dictPath, "r");
+    char word[LENGTH];
+
+    fread(word, LENGTH, 1, dict);
+
+    puts(word);
 }
