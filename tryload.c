@@ -34,23 +34,17 @@ int main(void){
         return 1;
     }
 
+    int word_size;
+
     char word[LENGTH + 1];
     char temp;
-    fread(word, LENGTH, 1, dict);
-
-    for(int i = 0; i < strlen(word); i++){
-        temp = word[i];
-        if (temp == '\n'){
-            word[i] = '\0';
-            //printf("n\n");
-        }
-
-        // else{
-        //     printf("%c",word[i]);
-        // }
+    while(fread(word, LENGTH, 1, dict) == 0){
+        word_size = strcspn(word, "\n");
+        word[word_size] = '\0';
+        printf("%s ", word);
     }
 
-    printf("%s", word[1]);
+
 
 
 }
