@@ -29,7 +29,12 @@ int main(void){
     char filePath[] = "texts/cat.txt";
 
     FILE *dict = fopen(dictPath, "r");
-    char word[LENGTH];
+    if (dict == NULL) {
+        puts("error in dict loading");
+        return 1;
+    }
+
+    char word[LENGTH + 1];
     char temp;
     fread(word, LENGTH, 1, dict);
 
