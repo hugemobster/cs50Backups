@@ -38,10 +38,12 @@ int main(void){
 
     char word[LENGTH + 1];
     char temp;
-    while(fread(word, LENGTH, 1, dict) == 0){
+    while(fgets(word, LENGTH, dict)){
         word_size = strcspn(word, "\n");
         word[word_size] = '\0';
         printf("%s ", word);
+
+
     }
 
 
