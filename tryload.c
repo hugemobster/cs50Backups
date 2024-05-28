@@ -10,7 +10,7 @@ int LENGTH = 45;
 // Represents a node in a hash table
 typedef struct node
 {
-    char word[LENGTH + 1];
+    char word[46];
     struct node *next;
 } node;
 
@@ -33,5 +33,17 @@ int main(void){
 
     fread(word, LENGTH, 1, dict);
 
-    puts(word);
+    for(int i = 0; i < strlen(word); i++){
+        if (strcasecmp(word[i],"\n")){
+            printf("n");
+        }
+
+        else{
+            printf("%c",word[i]);
+        }
+
+
+    }
+
+
 }
