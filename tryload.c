@@ -30,11 +30,12 @@ int main(void){
 
     FILE *dict = fopen(dictPath, "r");
     char word[LENGTH];
-
+    char temp;
     fread(word, LENGTH, 1, dict);
 
     for(int i = 0; i < strlen(word); i++){
-        if (strcasecmp(word[i],"\n")){
+        temp = word[i];
+        if (temp == '\n'){
             printf("n");
         }
 
